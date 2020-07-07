@@ -19,8 +19,16 @@ apache_global_vhost_settings: |
 apache_vhosts:
   # Additional properties:
   # 'serveradmin, serveralias, allow_override, options, extra_parameters'.
-  - servername: "local.dev"
+  - servername: 
+     - www.soad.37.25.186.151.xip.io
+     - www.web.37.25.186.151.xip.io
+   
+  - serveralias:
+      - www.soad.37.25.186.151.xip.io
+      - www.web.37.25.186.151.xip.io
+      
     documentroot: "/var/www/html"
+  -   
 
 apache_allow_override: "All"
 apache_options: "-Indexes +FollowSymLinks"
